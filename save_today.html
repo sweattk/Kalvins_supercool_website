@@ -1,0 +1,483 @@
+  
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>A simple flexbox-based responsive design</title>
+    <!-- Portfolio page -->
+  
+  <link rel="stylesheet" href="deletetoday.css">
+
+  <style>
+    
+    .txt_view {
+   display: block;
+	 overflow: hidden ;
+	 position:relative;
+	 width:1000px; 
+	 height:300px;
+	 border:3px solid rgb(199, 23, 23);
+	 background-color:rgb(237, 241, 2);
+	  box-sizing:border-box;
+	 -webkit-box-sizing:border-box;
+	 -moz-box-sizing:border-box;
+                                }
+.actionTxtType1 {
+	 padding:30px 40px;
+                         }
+.actionTxtType1 .txt_move {
+	 position:relative;
+	 display:inline-block;
+	 margin-bottom:25px;
+	 font-size:28px;
+	 line-height:28px;
+	 text-transform:uppercase;
+	 font-weight:700;
+	 letter-spacing:3px;
+	 transform:translateY(12px);
+	 -webkit-transform:translateY(12px);
+	 -moz-transform:translateY(12px);
+	 opacity:0;
+	 transition:all .5s;
+	 -webkit-transition:all .5s;
+	 -moz-transition:all .5s;
+                             }
+.actionTxtType1 .txt_move.txt1 {
+	 margin-top:45px;
+}
+.actionTxtType1 .txt_move.txt2 {
+	 transition-delay:.2s;
+	 -webkit-transition-delay:.2s;
+	 -moz-transition-delay:.2s;
+}
+.actionTxtType1 .txt_move.txt3 {
+	 transition-delay:.3s;
+	 -webkit-transition-delay:.3s;
+	 -moz-transition-delay:.3s;
+}
+.actionTxtType1 .txt_move:after {
+	 position:absolute;
+	 top:35px;
+	 right:0;
+	 display:block;
+	 width:100%;
+	 height:3px;
+	 content:'';
+	 background-color:#444;
+	 opacity:0;
+	 transition:opacity .1s .7s;
+	 -webkit-transition:opacity .1s .7s;
+	 -moz-transition:opacity .1s .7s;
+}
+.actionTxtType1:hover .txt_move {
+	 transform:translateY(0);
+	 -webkit-transform:translateY(0);
+	 -moz-transform:translateY(0);
+	 opacity:1;
+}
+.actionTxtType1:hover .txt_move:after  {
+	 opacity:1;
+}
+.actionTxtType1:hover .txt_move.txt1:after {
+	 animation:Txtline_movetxt1 2.5s .7s;
+	 -webkit-animation:Txtline_movetxt1 2.5s .7s;
+	 -moz-animation:Txtline_movetxt1 2.5s .7s;
+}
+.actionTxtType1:hover .txt_move.txt2:after {
+	 animation:Txtline_movetxt2 2.5s .7s;
+	 -webkit-animation:Txtline_movetxt2 2.5s .7s;
+	 -moz-animation:Txtline_movetxt2 2.5s .7s;
+}
+.actionTxtType1:hover .txt_move.txt3:after {
+	 animation:Txtline_movetxt3 2.5s .7s;
+	 -webkit-animation:Txtline_movetxt3 2.5s .7s;
+	 -moz-animation:Txtline_movetxt3 2.5s .7s;
+}
+@keyframes Txtline_movetxt1{
+0%{
+	 width:0%;
+}
+25%{
+	 width:115%;
+}
+52%{
+	 width:115%;
+}
+57%{
+	 width:100%;
+}
+100%{
+	 width:100%;
+}}
+@-webkit-keyframes Txtline_movetxt1{
+0%{
+	 width:0%;
+}
+25%{
+	 width:115%;
+}
+52%{
+	 width:115%;
+}
+57%{
+	 width:100%;
+}
+100%{
+	 width:100%;
+}}
+@keyframes Txtline_movetxt2{
+0%{
+	 width:0%;
+}
+25%{
+	 width:115%;
+}
+62%{
+	 width:115%;
+}
+67%{
+	 width:100%;
+}
+100%{
+	 width:100%;
+}}
+@-webkit-keyframes Txtline_movetxt2{
+0%{
+	 width:0%;
+}
+25%{
+	 width:115%;
+}
+62%{
+	 width:115%;
+}
+67%{
+	 width:100%;
+}
+100%{
+	 width:100%;
+}}
+@keyframes Txtline_movetxt3{
+0%{
+	 width:0%;
+}
+25%{
+	 width:115%;
+}
+72%{
+	 width:115%;
+}
+77%{
+	 width:100%;
+}
+100%{
+	 width:100%;
+}}
+@-webkit-keyframes Txtline_movetxt3{
+0%{
+	 width:0%;
+}
+25%{
+	 width:115%;
+}
+72%{
+	 width:115%;
+}
+77%{
+	 width:100%;
+}
+100%{
+	 width:100%;
+}}    
+
+  </style>
+</>
+
+
+<body id="page-top">
+  <nav class="navbar navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header page-scroll">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+        <a class="navbar-brand" href="#page-top"></a>
+      </div>
+      <ul class="nav navbar-nav navbar-right" id="navbar-list">
+        <li class="page-scroll"><a href="#about">ABOUT</a></li>
+        <li class="page-scroll"><a href="#portfolio">PORTFOLIO</a></li>
+        <li class="page-scroll"><a href="#contact">CONTACT</a></li>
+      </ul>
+    </div>
+    </div>
+    </div>
+  </nav>
+
+  <!-- Intro Section -->
+  <header>
+    <section id="intro" class="intro-section">
+      <div class="container page-scroll">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 text-center">
+            <h1>My Portfolio</h1>
+            <img src="https://i.pinimg.com/736x/8a/2f/c3/8a2fc37c5b277df3ba573705508bb7af.jpg" alt="Taken from off the internet" class="img-flat"></img>
+            <h3>Awesome Coder - Polyglot - Student
+            </br>
+            <p>
+              <a class="btn btn-lg btn-outline" href="#about">About Me</a><a class="btn btn-lg btn-outline" href="#contact">Contact Me</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="about-section">
+    <div class="container page-scroll">
+      <div class="row">
+        <div class="col-lg-12">
+          <h2>A bit about me</h2>
+          <hr>
+        </div>
+      </div>
+      <!-- begin row-->
+      <div class="row">
+        <div class="col-lg-4">
+          
+          </div>
+          <div class="media-body">
+          <h3>Coding</h3>
+          <!-- code --> 
+          <div class="txt_view actionTxtType1">
+            <span class="txt_move txt1">
+              Experience in Java
+            </span>
+            <br />
+            <span class="txt_move txt2">
+              Working with Python Web Frameworks
+            </span>
+            <br />
+            <span class="txt_move txt3">
+              HTML & CSS
+            </span>
+          </div>
+          
+          <div></div>
+          <h3>Languages</h3>
+
+          <div class="txt_view actionTxtType1">
+            <span class="txt_move txt1">
+              Native English Speaker
+            </span>
+            <br />
+            <span class="txt_move txt2">
+              I speak dork
+            </span>
+            <br />
+            <span class="txt_move txt3">
+              Ebonics
+            </span>
+          </div>
+       
+        
+          </div>
+          <!--
+          <div class="media-body">
+            <h3>Languages</h3>
+            <ul>
+              <li>Native English Speaker</li>
+              <li>B1-B2 German Speaker</li>
+              <li>B1 Hungarian Speaker (primary focus)</li>
+              <li>A2 French Speaker</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="pull-right">
+            <i class="fa fa-user">
+            </i>
+          </div>
+          <div class="media-body">
+            <h3>Personal</h3>
+            <ul>
+              <li>Keen cyclist and runner</li>
+              <li>At the University of Western Australia</li>
+              <li>Studying Computer Science</li>
+              <li>Completed Bachelor Of Arts</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- end row-->
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio-section">
+      <div class="container page-scroll">
+        <div class="row">
+        <!-- grid  <div class="col-lg-12"> -->
+            <h2>My Projects</h2>
+            <hr>
+            <h3>Click on an image to find out more</h3>
+            <br>
+          </div>
+        </div>
+
+        <div class="" >  </div>
+        <!-- bootstrap -->
+        <!--
+        <div class="row">
+          <a href="#myModal1" data-toggle="modal">
+            <div class="col-sm-2 col-sm-offset-2 portfolio-item 
+glyphicon glyphicon-book">
+            </div>
+          </a>
+          <a href="#myModal1" data-toggle="modal">
+            <div class="col-sm-2 portfolio-item 
+glyphicon glyphicon-list-alt">
+            </div>
+          </a>
+          <a href="#myModal1" data-toggle="modal">
+            <div class="col-sm-2 portfolio-item 
+glyphicon glyphicon-scale">
+            </div>
+          </a>
+          <a href="#myModal1" data-toggle="modal">
+            <div class="col-sm-2 portfolio-item 
+glyphicon glyphicon-piggy-bank">
+            </div>
+          </a>
+        </div> 
+      -->
+      </div>
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2>Contact Me</h2>
+            <hr>
+            <h3>Send me a message and I'll get back to you</h3>
+            <br>
+            </br>
+          </div>
+        </div>
+        <div class="row text-left">
+          <div class="col-lg-8 col-lg-offset-2">
+            <form name="submitForm">
+              <div class="row control-group">
+                <div class="form-group col-xs-8 col-xs-offset-2 floating-label-form-group controls">
+                  <label>Name</label>
+                  <input type="text" class="form-control" placeholder="Bruh"></input>
+                </div>
+              </div>
+              <div class="row control-group">
+                <div class="form-group col-xs-8 col-xs-offset-2 floating-label-form-group controls">
+                  <label>Email</label>
+                  <input type="email" class="form-control" placeholder="you@email.com">
+                </div>
+              </div>
+              <div class="row control-group">
+                <div class="form-group col-xs-8 col-xs-offset-2 floating-label-form-group controls">
+                  <label>Phone Number</label>
+                  <input type="text" class="form-control" placeholder="+61 9876 5432">
+                </div>
+              </div>
+              <div class="row control-group">
+                <div class="form-group col-xs-8 col-xs-offset-2 floating-label-form-group controls">
+                  <label>Message</label>
+                  <textarea id="message" name="message" placeholder="Message" rows="7" cols="30" required></textarea>
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-group col-xs-8 col-xs-offset-2">
+                  <button type="Submit" class="btn btn-lg btn-success contact-btn">Submit</button>
+                </div>
+    </section>
+      
+    <!-- footer -->
+    <!--
+    <footer class="text-center">
+      <div class="footer-above">
+        <div class="container">
+          <div class="row">
+            <div class="footer-col col-md-4">
+              <h3>Location</h3>
+              <p>Australia<br>Perth, West Australia 6000</p>
+            </div>
+            <div class="footer-col col-md-4">
+              <h3>Around the Web</h3>
+              <!-- "fa fa-fw" (fw class) ensures proper alignment of icons.  It messes up the icon-alignment if removed.
+              * fa-fw class will align icons vertically center with fixed amrgin, so the size of each icon will not vary and they aligned below each other in the center.
+              
+              <ul class="list-inline">
+                <li>
+                  <a href="#https://github.com/lqze" class="btn-social"><i class="fa fa-fw fa-github"></i></a>
+                </li>
+                <li>
+                  <a href="#https://facebook.com" class="btn-social"><i class="fa fa-fw fa-facebook"></i></a>
+                </li>
+                <li>
+                  <a href="#https://twitter.com" class="btn-social"><i class="fa fa-fw fa-twitter"></i></a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer-col col-md-4">
+              <h3>About This Site</h3>
+              <p>This portfolio was heavily inspired by Start Bootstrap's <a href="https://blackrockdigital.github.io/startbootstrap-freelancer/"><i>Freelancer</i></a> theme. A lot of code is reused.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    -->
+
+
+      <!-- 
+      <div class="footer-below">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              Copyright &copy; ezql 2016
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer> 
+    -->
+    <!-- end footer -->
+
+    <!-- Portfolio modals -->
+
+    <!--
+    <div class="portfolio-modal modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-content">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 col-lg-offset-2">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h2 class="modal-title">Notejar.co</h2>
+                <hr>
+            <div class="modal-body">
+              <p>Welcome to my blogging website. I started this blog to write about my journey and experiences in learning languages. I aim to be able to help others with learning languages.</p>
+              <img src="https://i.imgur.com/vJIN5D7.jpg" class="img-flat"></img>
+            </div>
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close Now</button>
+              </div>
+            </div>
+          </div>  -->
+          <!-- container -->
+        </div>
+        <!-- modal content -->
+    </div>
+</body>
+
+</html>
